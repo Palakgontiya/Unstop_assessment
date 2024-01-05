@@ -1,14 +1,28 @@
+import { useEffect } from "react";
+
 const AssesmentModal = ({ setIsModalOpen, isModalOpen }) => {
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isModalOpen]);
+
   return (
     <div
-      className={`flex flex-col w-[590px] bg-white rounded-xl text-[#1C4980] mb-3  ${isModalOpen
-    ? "translate-y-0 transition-all duration-300"
-    : "translate-y-full"
-} `}
+      className={`flex flex-col w-full md:w-[590px] bg-white rounded-xl text-[#1C4980] mb-3 absolute top-4 overflow-y-auto 
+        
+      `}
     >
-      <div className="w-full p-5 flex justify-between items-center h-[70px] border-b border-[#DADCE0]">
-        <h1 className="text-[20px] font-bold tracking-wide">
-          Create new assesment
+      <div className="w-full p-5 flex justify-between items-center md:h-[70px] h-[90px] border-b border-[#DADCE0]">
+        <h1 className="text-[20px] md:text-[20px] font-bold tracking-wide">
+          Create new assessment
         </h1>
         <button onClick={() => setIsModalOpen(false)}>
           <img src="images/cut.png" alt="" />

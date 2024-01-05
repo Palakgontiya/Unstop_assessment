@@ -9,7 +9,7 @@ const AssesmentCard = ({
   questions,
 }) => {
   return (
-    <div className="w-full md:w-[360px] md:h-[210px] h-[159px] flex flex-col border rounded-xl p-4 gap-3">
+    <div className="w-full  md:h-[220px] h-[159px]  min-w-[300px] flex flex-col border rounded-xl p-4 gap-3">
       <div className="flex justify-between items-start w-full">
         <div className="md:flex-col flex gap-3 ">
           <div className="md:h-[50px] md:w-[50px] h-[50px] w-[50px]  flex justify-center items-center rounded-xl bg-[#EBE8FD]">
@@ -20,9 +20,7 @@ const AssesmentCard = ({
             />
           </div>
           <div className="flex flex-col md:w-full justify-start gap-1 ">
-            <h1 className="font-semibold md:text-[18px] text-[14px]">
-              {title}
-            </h1>
+            <h1 className=" md:text-[20px] text-[14px]">{title}</h1>
             <div className="flex justify-start items-center gap-2">
               <h2 className="md:text-[14px] text-[12px] font-semibold">Job</h2>
               <div className="border border-[#DADCE0] h-[16px]"></div>
@@ -31,7 +29,7 @@ const AssesmentCard = ({
                 alt=""
                 className="h-[12px] w-[12px]"
               />
-              <p className="text-[12px] text-[#8DA4BF] font-semibold">{date}</p>
+              <p className="text-[14px] text-[#8DA4BF] ">{date}</p>
             </div>
           </div>
         </div>
@@ -43,21 +41,19 @@ const AssesmentCard = ({
       </div>
 
       <div className="w-full border-t-2 border-dotted border-[#BACBD5]"></div>
-      <div className="flex w-full justify-between items-center">
+      <div className="flex w-full justify-between items-center py-2">
         <div className="flex justify-between items-center gap-3">
           <div className="flex-flex-col">
-            <p className="md:text-[14px] text-[12px] font-semibold">
+            <p className="md:text-[16px] text-[12px] font-semibold">
               {duration}
             </p>
-            <p className="md:text-[12px] text-[12px] font-semibold">Duration</p>
+            <p className="md:text-[14px] text-[12px] ">Duration</p>
           </div>
           <div className="flex-flex-col">
-            <p className="md:text-[14px] text-[12px] font-semibold">
+            <p className="md:text-[16px] text-[12px] font-semibold">
               {questions}
             </p>
-            <p className="md:text-[12px] text-[12px] font-semibold">
-              Questions
-            </p>
+            <p className="md:text-[14px] text-[12px] ">Questions</p>
           </div>
         </div>
         <div className="flex justify-center items-center gap-2">
