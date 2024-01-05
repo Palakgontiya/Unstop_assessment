@@ -5,9 +5,11 @@ import Assesment from "./components/RightPannel/Assesment.layout";
 function App() {
   return (
     <div className="w-full bg-slate-100  flex justify-start gap-4   ">
-     <SideBar />
-     <Assesment />
-     {/* <AssesmentModal /> */}
+      <div className="md:flex hidden">
+        <SideBar />
+      </div>
+      <Assesment />
+      {/* <AssesmentModal /> */}
     </div>
   );
 }
