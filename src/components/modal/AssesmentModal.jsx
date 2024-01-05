@@ -16,9 +16,7 @@ const AssesmentModal = ({ setIsModalOpen, isModalOpen }) => {
 
   return (
     <div
-      className={`flex flex-col w-full md:w-[590px] bg-white rounded-xl text-[#1C4980] mb-3 absolute top-4 overflow-y-auto 
-        
-      `}
+      className={`flex flex-col w-full md:w-[590px] fixed top-5  bg-white rounded-xl text-[#1C4980] mb-3 `}
     >
       <div className="w-full p-5 flex justify-between items-center md:h-[70px] h-[90px] border-b border-[#DADCE0]">
         <h1 className="text-[20px] md:text-[20px] font-bold tracking-wide">

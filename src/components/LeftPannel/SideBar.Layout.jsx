@@ -1,8 +1,12 @@
 import { useState } from "react";
 import Button from "../buttons/Button";
+import RoundStatusIcon from "../../assets/images/svg/RoundStatus";
+import DashboardIcon from "../../assets/images/svg/Dashboard";
+import AssessmentIcon from "../../assets/images/svg/Assessment";
+import LibraryIcon from "../../assets/images/svg/Library";
 
 const SideBar = () => {
-  const [clickedButton, setClickedButton] = useState(null);
+  const [clickedButton, setClickedButton] = useState("assessment");
 
   const handleButtonClick = (buttonId) => {
     setClickedButton(buttonId);
@@ -11,21 +15,21 @@ const SideBar = () => {
   return (
     <div className="flex flex-col justify-start items-center gap-2 py-4 px-8 bg-white tracking-wide ">
       <Button
-        icon={"dashboard"}
+        icon={DashboardIcon}
         btnText={"Dashboard"}
         id={"dashboard"}
         onClick={() => handleButtonClick("dashboard")}
         isClicked={clickedButton === "dashboard"}
       />
       <Button
-        icon={"notes"}
+        icon={AssessmentIcon}
         btnText={"Assessment"}
         id={"assessment"}
         onClick={() => handleButtonClick("assessment")}
         isClicked={clickedButton === "assessment"}
       />
       <Button
-        icon={"quiz"}
+        icon={LibraryIcon}
         btnText={"My Library"}
         id={"library"}
         onClick={() => handleButtonClick("library")}
@@ -36,7 +40,7 @@ const SideBar = () => {
           Admin
         </button>
         <Button
-          icon={"admin"}
+          icon={RoundStatusIcon}
           btnText={"Round Status"}
           id={"admin"}
           onClick={() => handleButtonClick("admin")}

@@ -5,7 +5,7 @@ import Assesment from "./components/RightPannel/Assesment.layout";
 function App() {
   return (
     <div className="w-full bg-slate-100  flex justify-start gap-4   ">
-     <div className="hidden md:hidden lg:flex">
+      <div className="md:flex hidden">
         <SideBar />
       </div>
       <Assesment />
