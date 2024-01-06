@@ -49,7 +49,7 @@ const ModalView = ({ setIsModalOpen, isModalOpen, title, children }) => {
     width: "100%",
     height: "100%",
     backgroundColor: "rgba(0, 0, 0, 0.6)",
-    zIndex: 9998,  // Ensure backdrop is behind the modal
+    zIndex: 9998, 
   };
 
   return (
