@@ -19,9 +19,9 @@ const SidebarButton = ({ icon: Icon, btnText, id, onClick, isClicked }) => {
   return (
     <div
       id={id}
-      className={`flex flex-col justify-center items-center gap-2 rounded-lg py-3 w-[98px] cursor-pointer text-[#0073E6] border ${
+      className={`flex flex-col justify-center items-center gap-2 rounded-lg py-3 w-[98px] border cursor-pointer text-[#0073E6]  ${
         isClicked
-          ? `border-${selectedColor} text-${selectedColor} bg-[#E5F1FC]`
+          ? `border border-[${selectedColor}] text-${selectedColor} bg-[#E5F1FC]`
           : `border-transparent text-[${selectedColor}] bg-transparent`
       }`}
       onClick={handleClick} // Use the defined handleClick function for click event
