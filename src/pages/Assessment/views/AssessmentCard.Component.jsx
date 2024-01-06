@@ -1,5 +1,4 @@
-const AssesmentCard = ({
- 
+const AssessmentCard = ({
   title,
   date,
   duration,
@@ -7,7 +6,7 @@ const AssesmentCard = ({
   userIcon: UserIcon,
 }) => {
   return (
-    <div className="w-full  md:h-[220px] h-[159px]  min-w-[300px] flex flex-col border rounded-xl p-4 gap-3">
+    <div className="w-full  md:h-[220px] h-[159px]  min-w-[300px] flex flex-col border rounded-xl p-4 gap-3 cursor-pointer">
       <div className="flex justify-between items-start w-full">
         <div className="md:flex-col flex gap-3 ">
           <div className="md:h-[50px] md:w-[50px] h-[50px] w-[50px]  flex justify-center items-center rounded-xl bg-[#EBE8FD]">
@@ -130,4 +129,4 @@ const AssesmentCard = ({
   );
 };
 
-export default AssesmentCard;
+export default AssessmentCard;

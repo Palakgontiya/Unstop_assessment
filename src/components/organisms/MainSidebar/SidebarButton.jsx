@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-const Button = ({ icon: Icon, btnText, id, onClick, isClicked }) => {
+const SidebarButton = ({ icon: Icon, btnText, id, onClick, isClicked }) => {
   // Define default props
-  Button.defaultProps = {
+  SidebarButton.defaultProps = {
     isClicked: false,
   };
 
@@ -36,8 +36,8 @@ const Button = ({ icon: Icon, btnText, id, onClick, isClicked }) => {
   );
 };
 
-// Define prop types for the Button component
-Button.propTypes = {
+// Define prop types for the SidebarButton component
+SidebarButton.propTypes = {
   icon: PropTypes.elementType.isRequired,
   btnText: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
@@ -45,4 +45,4 @@ Button.propTypes = {
   isClicked: PropTypes.bool,
 };
 
-export default Button;
+export default SidebarButton;

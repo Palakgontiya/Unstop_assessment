@@ -1,7 +1,7 @@
-const MobileSideBar = ({ isOpen, onClose }) => {
+const MainMobileSidebar = ({ isOpen, onClose }) => {
   return (
     <div
-      className={`bg-[#F2F8FE] text-[#1C4980] h-screen fixed left-0 top-0 flex flex-col items-center ${
+      className={`bg-[#F2F8FE] text-[#1C4980] lg:hidden h-screen fixed left-0 top-0 flex flex-col items-center ${
         isOpen ? "w-[300px]" : "w-0"
       } overflow-hidden transition-width duration-300`}
     >
@@ -81,7 +81,6 @@ const MobileSideBar = ({ isOpen, onClose }) => {
       <div className="w-[255px] ml-2 border-t-2 border-dotted border-[#BACBD5] mt-2"></div>
       <div className="flex p-3 justify-between items-center w-[255px] h-[56px] gap-2">
         <div className="flex justify-center items-center gap-2">
-          
           <svg
             width="22"
             height="22"
@@ -106,4 +105,4 @@ const MobileSideBar = ({ isOpen, onClose }) => {
   );
 };
 
-export default MobileSideBar;
+export default MainMobileSidebar;

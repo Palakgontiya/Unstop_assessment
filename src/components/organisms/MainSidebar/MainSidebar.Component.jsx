@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Button from "../buttons/Button";
-import RoundStatusIcon from "../../assets/images/svg/RoundStatus";
-import DashboardIcon from "../../assets/images/svg/Dashboard";
-import AssessmentIcon from "../../assets/images/svg/Assessment";
-import LibraryIcon from "../../assets/images/svg/Library";
+import DashboardIcon from "../../../assets/images/svg/Dashboard";
+import AssessmentIcon from "../../../assets/images/svg/Assessment";
+import LibraryIcon from "../../../assets/images/svg/Library";
+import RoundStatusIcon from "../../../assets/images/svg/RoundStatus";
+import SidebarButton from "./SidebarButton";
 
-const SideBar = () => {
+const MainSidebar = () => {
   const [clickedButton, setClickedButton] = useState("assessment");
 
   const handleButtonClick = (buttonId) => {
@@ -14,21 +14,21 @@ const SideBar = () => {
 
   return (
     <div className="flex flex-col justify-start items-center gap-2 py-4 px-8 bg-white tracking-wide ">
-      <Button
+      <SidebarButton
         icon={DashboardIcon}
         btnText={"Dashboard"}
         id={"dashboard"}
         onClick={() => handleButtonClick("dashboard")}
         isClicked={clickedButton === "dashboard"}
       />
-      <Button
+      <SidebarButton
         icon={AssessmentIcon}
         btnText={"Assessment"}
         id={"assessment"}
         onClick={() => handleButtonClick("assessment")}
         isClicked={clickedButton === "assessment"}
       />
-      <Button
+      <SidebarButton
         icon={LibraryIcon}
         btnText={"My Library"}
         id={"library"}
@@ -39,7 +39,7 @@ const SideBar = () => {
         <button className="border border-[#D63500] font-semibold text-[#D63500] bg-[#FBEBEA] text-[11px] px-3 py-1 rounded-3xl">
           Admin
         </button>
-        <Button
+        <SidebarButton
           icon={RoundStatusIcon}
           btnText={"Round Status"}
           id={"admin"}
@@ -51,4 +51,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default MainSidebar;
