@@ -3,6 +3,7 @@ import UsersIcon from "../../../assets/images/svg/User";
 import AssessmentCard from "./AssessmentCard.Component";
 import NewAssesmentCard from "./NewAssessmentCard.Component";
 
+// Mock data for Assessment Cards
 const assessmentCardsData = [
   {
     icon1: "vector1",
@@ -87,30 +88,11 @@ const MyAssessmentsList = () => {
   return (
     <div className="flex flex-col md:flex-row w-full gap-5 flex-wrap">
       <div className="md:flex-1 lg:flex-1/3">
-        <NewAssesmentCard
-          icon1={"vector"}
-          icon2={"3 dot"}
-          icon3={"cal"}
-          icon4={"attach"}
-          title={"Math Assessment"}
-          date={"20 Apr 2023"}
-          duration={"00"}
-          questions={"00"}
-        />
+        <NewAssesmentCard />
       </div>
       {assessmentCardsData.map((cardData, index) => (
         <div key={index} className="md:flex-1 lg:flex-1/3">
-          <AssessmentCard
-            icon1={cardData.icon1}
-            icon2={cardData.icon2}
-            icon3={cardData.icon3}
-            icon4={cardData.icon4}
-            title={cardData.title}
-            date={cardData.date}
-            duration={cardData.duration}
-            questions={cardData.questions}
-            userIcon={cardData.userIcon}
-          />
+          <AssessmentCard {...cardData} />
         </div>
       ))}
     </div>

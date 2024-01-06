@@ -4,6 +4,7 @@ import NewAssessmentForm from "./NewAssessmentForm";
 import ModalView from "../../../components/templates/Modal/Modal.Component";
 
 const NewAssesmentCard = () => {
+  // State to handle the visibility of the Modal
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -19,6 +20,7 @@ const NewAssesmentCard = () => {
         From here you can add questions of multiple types
         <br /> like MCQs, subjective (text or paragraph)!
       </div>
+      {/* Logic for showing the Modal on Plus icon Click */}
       {isModalOpen && (
         <div className="absolute overflow-y-auto h-screen w-full p-6 top-0  left-0 flex justify-center items-center bg-black bg-opacity-60 z-50">
           <ModalView

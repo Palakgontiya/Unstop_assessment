@@ -2,24 +2,36 @@ import { useState } from "react";
 import CancelIcon from "../../../assets/images/svg/Cancel";
 
 const NewAssessmentForm = () => {
+  // State to hold selected skills
   const [skills, setSkills] = useState([
     "UI/UX & Design",
     "No of Questions",
     "Web Development",
     "UI/UX & Design",
     "No of Questions",
-  ]); // State to hold selected skills
+  ]);
+
   const [newSkill, setNewSkill] = useState(""); // State to hold the newly entered skill
 
-  const handleSkillInputChange = (e) => {
-    setNewSkill(e.target.value); // Update the new skill as the user types
+  const onSkillInputChange = (e) => {
+    setNewSkill(e.target.value); // Updating the new skill accordig to the user input
   };
 
-  const handleAddSkill = () => {
-    if (newSkill.trim() !== "") {
-      setSkills([...skills, newSkill.trim()]); // Add the new skill to the list of skills
-      setNewSkill(""); // Clear the input after adding the skill
+  // Adding the skill on enter 
+  const onAddSkill = (e) => {
+    if (e.key !== "Enter") {
+      return;
     }
+    if (newSkill.trim() !== "") {
+      setSkills([...skills, newSkill.trim()]); // Adding the new skill to the list of skills
+      setNewSkill(""); // Clearing the input field after adding the new skill
+    }
+  };
+
+  // Logic for deleting any of the skill on cross btn Click
+  const onDeleteSkill = (index) => {
+    const updatedSkills = skills.filter((_, i) => i !== index);
+    setSkills(updatedSkills);
   };
 
   return (
@@ -72,6 +84,7 @@ const NewAssessmentForm = () => {
           Skills
         </label>
         <div className="w-100 border border-[#DADCE0] rounded-xl p-2">
+          {/* Logic for showing the skills added by the user */}
           {skills.length > 0 && (
             <div className="w-full flex flex-wrap gap-2 border-b border-gray-300 py-2 outline-none ">
               {skills.map((skill, index) => (
@@ -82,12 +95,7 @@ const NewAssessmentForm = () => {
                   <p className="text-[12px]">{skill}</p>
                   <p
                     className="text-[12px] cursor-pointer"
-                    onClick={() => {
-                      const updatedSkills = skills.filter(
-                        (_, i) => i !== index
-                      );
-                      setSkills(updatedSkills);
-                    }}
+                    onClick={() => onDeleteSkill(index)}
                   >
                     <CancelIcon fill="#1C4980" width={22} height={22} />
                   </p>
@@ -99,12 +107,8 @@ const NewAssessmentForm = () => {
             type="text"
             placeholder="Type here"
             value={newSkill}
-            onChange={handleSkillInputChange}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                handleAddSkill();
-              }
-            }}
+            onChange={onSkillInputChange}
+            onKeyDown={onAddSkill}
             className="w-100 w-[100%] my-2 rounded-lg px-1 outline-none border border-gray-300 border-none"
           />
         </div>

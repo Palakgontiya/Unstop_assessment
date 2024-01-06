@@ -1,8 +1,27 @@
-# React + Vite
+# Unstop Dashboard App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Unstop Dashboard App! This app provides a Web + Mobile user-friendly interface for managing and monitoring your tasks and projects. To get started, follow the instructions below:
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can also explore a live demo of the Unstop Dashboard App by visiting [Click to see Demo](https://unstop-dashboard-ui.netlify.app/).
+
+## Installation
+
+1. Open the project folder in your terminal or code editor.
+
+2. Run the following command to install the necessary dependencies:
+
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+3. After the installation is complete, start the development server by running:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your web browser and navigate to [http://localhost:3000](http://localhost:3000) to access the Unstop Dashboard App.

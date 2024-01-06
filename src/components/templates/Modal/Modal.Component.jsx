@@ -9,6 +9,7 @@ const ModalView = ({
   children,
   modalWidth,
 }) => {
+
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = "hidden";
@@ -50,13 +51,7 @@ const ModalView = ({
   `;
 
   return (
-    <>
-      {isModalOpen && (
-        <div
-          className="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-50"
-          onClick={() => setIsModalOpen(false)}
-        ></div>
-      )}
+    <>    
       <div style={{ ...modalStyle, scrollbarWidth: "thin" }}>
         <style>{isModalOpen ? hideScrollbarStyle : ""}</style>
         <div className="flex justify-between items-center mb-3">

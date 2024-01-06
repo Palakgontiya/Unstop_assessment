@@ -3,14 +3,14 @@ import CandidatesIcon from "../../../assets/images/svg/Candidates";
 import TotalAssessmentIcon from "../../../assets/images/svg/TotalAssessment";
 import TotalPurposeIcon from "../../../assets/images/svg/TotalPurpose";
 
-const AssessmentStats = ({ isSectionVisible }) => {
+const AssessmentStats = ({ isAssessmentStatsVisible }) => {
   return (
     <>
-      {/* first section of main container of the assesment page */}
+      {/* Stats section for Desktop view */}
       <div className="w-full p-5 md:flex md:flex-col hidden items-start   gap-5 text-[#1C4980] ">
         <h1 className=" text-[21px]  ">Assessments Overview</h1>
         <div className=" w-full flex justify-start  flex-1 flex-wrap border rounded-xl">
-          {/* one */}
+          {/* First div */}
           <div
             style={{ flex: 16 }}
             className=" border-r py-4 px-5 flex flex-col items-start gap-4 "
@@ -25,7 +25,7 @@ const AssessmentStats = ({ isSectionVisible }) => {
               </div>
             </div>
           </div>
-          {/* two */}
+          {/* Second Div */}
           <div
             style={{  flex: 35 }}
             className="  w-[369px] border-r py-4 px-5 flex flex-col items-start gap-3"
@@ -56,7 +56,7 @@ const AssessmentStats = ({ isSectionVisible }) => {
               </div>
             </div>
           </div>
-          {/* three */}
+          {/* Third Div*/}
           <div
             style={{  flex: 50 }}
             className=" border-r py-4 px-5 flex flex-col items-start gap-3"
@@ -97,7 +97,7 @@ const AssessmentStats = ({ isSectionVisible }) => {
               </div>
             </div>
           </div>
-          {/* four */}
+          {/* Fourth Div */}
           <div
             style={{ flex: 15 }}
             className="py-4 px-5 flex flex-col items-start gap-4 flex-basis-15"
@@ -114,11 +114,12 @@ const AssessmentStats = ({ isSectionVisible }) => {
           </div>
         </div>
       </div>
-      {/* Section for mobile view */}
-      {isSectionVisible && (
+
+   {/* Stats section for Mobile/Tablet view */}
+      {isAssessmentStatsVisible && (
         <div
           className={`w-full  p-5 md:hidden flex items-start text-[#1C4980] transition-height duration-300   ${
-            isSectionVisible ? "h-[400px]" : "h-0 "
+            isAssessmentStatsVisible ? "h-[400px]" : "h-0 "
           }`}
         >
           <div className=" lg:hidden w-full flex flex-col justify-start border  rounded-xl">

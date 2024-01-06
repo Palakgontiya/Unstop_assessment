@@ -3,9 +3,11 @@ import DashboardIcon from "../../../assets/images/svg/Dashboard";
 import AssessmentIcon from "../../../assets/images/svg/Assessment";
 import LibraryIcon from "../../../assets/images/svg/Library";
 import RoundStatusIcon from "../../../assets/images/svg/RoundStatus";
+
 const MainMobileSidebar = ({ isOpen, onClose }) => {
   return (
     <div
+      // using isOpen prop to achiv the behaviour of the sidebar
       className={`bg-[#F2F8FE] text-[#1C4980] lg:hidden h-screen fixed left-0 top-0 flex flex-col items-center ${
         isOpen ? "w-[300px]" : "w-0"
       } overflow-hidden transition-width duration-300`}
@@ -13,6 +15,7 @@ const MainMobileSidebar = ({ isOpen, onClose }) => {
       <div className="w-[255px]  flex flex-col justify-center items-center mt-5 ml-2">
         <div className="flex justify-between items-start w-full h-[36px]">
           <p className="text-[14px] font-semibold">Menu</p>
+          {/* using the onClose prop to handle the sidebar visibility */}
           <button onClick={onClose}>
             <CancelIcon fill="#1C4980" />
           </button>
