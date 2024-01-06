@@ -45,9 +45,8 @@ const NewAssessmentForm = () => {
             className="w-full border border-[#DADCE0] py-3 rounded-lg outline-none pl-4"
           >
             <option value="">Select</option>
-            <option value="Option 1">Option 1</option>
-            <option value="Option 2">Option 2</option>
-            {/* Add more options as needed */}
+            <option value="Job">Job</option>
+            <option value="Internship">Internship</option>
           </select>
         </div>
       </div>
@@ -62,9 +61,8 @@ const NewAssessmentForm = () => {
             className="w-full border border-[#DADCE0] py-3 rounded-lg outline-none pl-4"
           >
             <option value="">Select</option>
-            <option value="Option 1">Option 1</option>
-            <option value="Option 2">Option 2</option>
-            {/* Add more options as needed */}
+            <option value="Job">Job</option>
+            <option value="Internship">Internship</option>
           </select>
         </div>
       </div>
