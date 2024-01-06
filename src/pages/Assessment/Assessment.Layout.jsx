@@ -32,10 +32,7 @@ function Assessment() {
         <MainSidebar />
       </div>
 
-      <div
-        className="bg-white w-full rounded-xl flex flex-col"
-        style={{ marginRight: "18px" }}
-      >
+      <div className="bg-white w-full rounded-xl flex flex-col lg:mr-[18px]">
         {/* navbar for Assesment page */}
         <AssessmentNavbar handleToggleSidebar={handleToggleSidebar} />
 
