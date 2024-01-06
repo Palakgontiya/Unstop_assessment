@@ -2,14 +2,7 @@ import { useEffect } from "react";
 import PropTypes from "prop-types";
 import CancelIcon from "../../../assets/images/svg/Cancel";
 
-const ModalView = ({
-  setIsModalOpen,
-  isModalOpen,
-  title,
-  children,
-  modalWidth,
-}) => {
-
+const ModalView = ({ setIsModalOpen, isModalOpen, title, children }) => {
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = "hidden";
@@ -23,10 +16,9 @@ const ModalView = ({
 
   const modalStyle = {
     position: "fixed",
-    top: `10px`,
+    top: `20px`,
     left: "50%",
     transform: "translateX(-50%)",
-    width: modalWidth,
     maxHeight: "96vh",
     overflowY: "auto",
     overscrollBehavior: "contain",
@@ -50,9 +42,23 @@ const ModalView = ({
     }
   `;
 
+  const backdropStyle = {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "rgba(0, 0, 0, 0.6)",
+    zIndex: 9998,  // Ensure backdrop is behind the modal
+  };
+
   return (
-    <>    
-      <div style={{ ...modalStyle, scrollbarWidth: "thin" }}>
+    <>
+      {isModalOpen && <div style={backdropStyle}></div>}
+      <div
+        style={{ ...modalStyle, scrollbarWidth: "thin" }}
+        className="w-[100%] md:w-[600px] lg:w-[700px]"
+      >
         <style>{isModalOpen ? hideScrollbarStyle : ""}</style>
         <div className="flex justify-between items-center mb-3">
           <h1 className="text-2xl font-bold">{title}</h1>
@@ -64,10 +70,6 @@ const ModalView = ({
       </div>
     </>
   );
-};
-
-ModalView.defaultProps = {
-  modalWidth: "590px",
 };
 
 ModalView.propTypes = {

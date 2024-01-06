@@ -22,15 +22,13 @@ const NewAssesmentCard = () => {
       </div>
       {/* Logic for showing the Modal on Plus icon Click */}
       {isModalOpen && (
-        <div className="absolute overflow-y-auto h-screen w-full p-6 top-0  left-0 flex justify-center items-center bg-black bg-opacity-60 z-50">
-          <ModalView
-            title="Create new assessment"
-            setIsModalOpen={setIsModalOpen}
-            isModalOpen={isModalOpen}
-          >
-            <NewAssessmentForm />
-          </ModalView>
-        </div>
+        <ModalView
+          title="Create new assessment"
+          setIsModalOpen={setIsModalOpen}
+          isModalOpen={isModalOpen}
+        >
+          <NewAssessmentForm />
+        </ModalView>
       )}
     </div>
   );
