@@ -36,7 +36,7 @@ const MainSidebar = () => {
   };
 
   return (
-    <div className="flex flex-col justify-start items-center gap-2 py-4 px-8 bg-white tracking-wide ">
+    <div className="lg:flex flex-col md:hidden  justify-start items-center gap-2 py-4 px-8 bg-white tracking-wide ">
       {buttonData.map((button) => (
         <SidebarButton
           key={button.id}

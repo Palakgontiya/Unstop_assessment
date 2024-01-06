@@ -3,7 +3,7 @@ import HamburgerIcon from "../../../assets/images/svg/Hamburger";
 const AssessmentNavbar = ({ handleToggleSidebar }) => {
   return (
     <>
-    {/* Navbar for desktop */}
+      {/* Navbar for desktop */}
       <div className="w-full h-[70px] border-b  flex-shrink-0 border-[#DDE5EA] lg:flex md:hidden hidden justify-between items-center px-5">
         <div className=" flex justify-between items-center gap-5 h-full ">
           <h1 className="text-[#1C4980] font-semibold text-[22px]">
@@ -18,8 +18,8 @@ const AssessmentNavbar = ({ handleToggleSidebar }) => {
           </div>
         </div>
       </div>
-       {/* Navbar for Mobile and Tablet */}
-      <div className="w-full  h-[50px]  flex-shrink-0  flex lg:hidden  justify-between items-center px-5 ">
+      {/* Navbar for Mobile and Tablet */}
+      <div className="w-full  h-[50px]  flex-shrink-0  flex lg:hidden    justify-between items-center px-5 ">
         <div className="flex justify-center items-center gap-2">
           {/* using the handleToggleSidebar prop here for sidebar visibility  */}
           <div
